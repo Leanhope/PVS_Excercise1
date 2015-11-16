@@ -1,0 +1,8 @@
+2.1)
+Wir haben diesen For-Loop parallelisiert, da hier der größte Rechenaufwand entsteht. Man kann mehrere Bereiche der Matrix gleichzeitig berechnen.
+
+2.4)
+Bei der Verwendung von "#pragma omp critical" statt "#pragma omp for collapse(3)" ist der Speedup minimal. Doch dieser kann ignoriert werden, die beiden Matrizen sind nämlich nicht identisch.
+
+Ein entfernen der festgelegten num_threads bei der Initialisierung des parallelen Teils reduziert den Speedup bei den meisten Durchläufen.
+
